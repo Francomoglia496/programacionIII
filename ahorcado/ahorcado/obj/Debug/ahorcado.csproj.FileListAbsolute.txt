@@ -1,0 +1,7 @@
+c:\users\lenovo\documents\visual studio 2012\Projects\ahorcado\ahorcado\bin\Debug\ahorcado.exe.config
+c:\users\lenovo\documents\visual studio 2012\Projects\ahorcado\ahorcado\bin\Debug\ahorcado.exe
+c:\users\lenovo\documents\visual studio 2012\Projects\ahorcado\ahorcado\bin\Debug\ahorcado.pdb
+c:\users\lenovo\documents\visual studio 2012\Projects\ahorcado\ahorcado\bin\Debug\AhorcadoPalabras.dll
+c:\users\lenovo\documents\visual studio 2012\Projects\ahorcado\ahorcado\obj\Debug\ahorcado.csprojResolveAssemblyReference.cache
+c:\users\lenovo\documents\visual studio 2012\Projects\ahorcado\ahorcado\obj\Debug\ahorcado.exe
+c:\users\lenovo\documents\visual studio 2012\Projects\ahorcado\ahorcado\obj\Debug\ahorcado.pdb
