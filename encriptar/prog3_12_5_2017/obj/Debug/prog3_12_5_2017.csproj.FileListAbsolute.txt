@@ -4,3 +4,9 @@ c:\users\lenovo\documents\visual studio 2012\Projects\prog3_12_5_2017\prog3_12_5
 c:\users\lenovo\documents\visual studio 2012\Projects\prog3_12_5_2017\prog3_12_5_2017\obj\Debug\prog3_12_5_2017.csprojResolveAssemblyReference.cache
 c:\users\lenovo\documents\visual studio 2012\Projects\prog3_12_5_2017\prog3_12_5_2017\obj\Debug\prog3_12_5_2017.exe
 c:\users\lenovo\documents\visual studio 2012\Projects\prog3_12_5_2017\prog3_12_5_2017\obj\Debug\prog3_12_5_2017.pdb
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\encriptar\prog3_12_5_2017\bin\Debug\prog3_12_5_2017.exe.config
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\encriptar\prog3_12_5_2017\obj\Debug\prog3_12_5_2017.exe
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\encriptar\prog3_12_5_2017\obj\Debug\prog3_12_5_2017.pdb
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\encriptar\prog3_12_5_2017\bin\Debug\prog3_12_5_2017.exe
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\encriptar\prog3_12_5_2017\bin\Debug\prog3_12_5_2017.pdb
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\encriptar\prog3_12_5_2017\obj\Debug\prog3_12_5_2017.csprojResolveAssemblyReference.cache
