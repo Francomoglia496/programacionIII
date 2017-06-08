@@ -1,0 +1,10 @@
+c:\users\lenovo\documents\visual studio 2012\Projects\intentoLaberinto\intentoLaberinto\bin\Debug\intentoLaberinto.exe.config
+c:\users\lenovo\documents\visual studio 2012\Projects\intentoLaberinto\intentoLaberinto\bin\Debug\intentoLaberinto.exe
+c:\users\lenovo\documents\visual studio 2012\Projects\intentoLaberinto\intentoLaberinto\bin\Debug\intentoLaberinto.pdb
+c:\users\lenovo\documents\visual studio 2012\Projects\intentoLaberinto\intentoLaberinto\obj\Debug\intentoLaberinto.csprojResolveAssemblyReference.cache
+c:\users\lenovo\documents\visual studio 2012\Projects\intentoLaberinto\intentoLaberinto\obj\Debug\intentoLaberinto.Form1.resources
+c:\users\lenovo\documents\visual studio 2012\Projects\intentoLaberinto\intentoLaberinto\obj\Debug\intentoLaberinto.Properties.Resources.resources
+c:\users\lenovo\documents\visual studio 2012\Projects\intentoLaberinto\intentoLaberinto\obj\Debug\intentoLaberinto.csproj.GenerateResource.Cache
+c:\users\lenovo\documents\visual studio 2012\Projects\intentoLaberinto\intentoLaberinto\obj\Debug\intentoLaberinto.exe
+c:\users\lenovo\documents\visual studio 2012\Projects\intentoLaberinto\intentoLaberinto\obj\Debug\intentoLaberinto.pdb
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\intentoLaberinto\intentoLaberinto\obj\Debug\intentoLaberinto.Form2.resources
