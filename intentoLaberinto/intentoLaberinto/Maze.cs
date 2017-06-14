@@ -11,8 +11,12 @@ namespace intentoLaberinto
 {
     public class Maze
     {
+        //tamaño de la celda
         private int padd;
+
         private Random currentCelda;
+
+        //clase que define un objeto para dibujar las lineas
         Pen pen1 = new Pen(Color.Blue, 3.0f);
         Form1 formulario = new Form1();
 
@@ -41,6 +45,7 @@ namespace intentoLaberinto
             int masdeunaCelda, otraCelda;
             int m = 0, n = 0;
 
+            //define la cant de celdas
             for (int i = 0; i <= LimiteH; i += padd)
             {
                 n++; //Horizontal
@@ -54,7 +59,7 @@ namespace intentoLaberinto
 
             if (primereVez)
             {
-                celda0 = new celda[m, n];
+                celda0 = new celda[ m, n];
 
                 for (int i = 0; i < m; i++)
                     for (int j = 0; j < n; j++)
@@ -78,10 +83,11 @@ namespace intentoLaberinto
                     }
 
                 /*
-                 * create a CellStack (LIFO) to hold a list of cell locations  
+                create a CellStack (LIFO) to hold a list of cell locations  
                 set TotalCells = number of cells in grid  
                 choose a cell at random and call it CurrentCell  
                 set VisitedCells = 1  
+
    
                 while VisitedCells < TotalCells  
                 find all neighbors of CurrentCell with all walls intact   
@@ -98,14 +104,17 @@ namespace intentoLaberinto
                 endWhile  
                  */
 
+
+                //carga las cordenadas de las celdas
                 visitedCeldas = 1;
-                thisCelda1 = (int)currentCelda.Next(0, m); //Random no incluye el maximo valor
+                thisCelda1 = (int)currentCelda.Next( 0, m); //Random no incluye el maximo valor
                 thisCelda2 = (int)currentCelda.Next(0, n);
 
                 while (visitedCeldas < totalCeldas)
                 {
                     masdeunaCelda = 0;
 
+                    //pregunta si la celda de arriba no tiene ninguna pared
                     if (celda0[thisCelda1, thisCelda2].N == 1)
                         if (celda0[thisCelda1 - 1, thisCelda2].N != 0 &&
                             celda0[thisCelda1 - 1, thisCelda2].E != 0 &&
@@ -176,7 +185,7 @@ namespace intentoLaberinto
                 } // se terminó el while
             }  // se terminò el if(primeraVez)
 
-            DibujarLab(g, m, n, LimiteV, LimiteH);
+            DibujarLab( g, m, n, LimiteV, LimiteH);
         }
 
         private int cogerCelda(ref celda[,] celda0, int thisCelda1, int thisCelda2)
@@ -187,7 +196,7 @@ namespace intentoLaberinto
 
             while (valor)
             {
-                escoger = currentCelda.Next(1, 5);
+                escoger = currentCelda.Next(1, 5); //numero aleatorio que selecciona la celda a analizar
 
                 switch (escoger)
                 {

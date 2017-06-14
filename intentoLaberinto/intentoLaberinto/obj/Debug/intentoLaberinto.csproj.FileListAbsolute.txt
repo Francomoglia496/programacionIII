@@ -8,3 +8,13 @@ c:\users\lenovo\documents\visual studio 2012\Projects\intentoLaberinto\intentoLa
 c:\users\lenovo\documents\visual studio 2012\Projects\intentoLaberinto\intentoLaberinto\obj\Debug\intentoLaberinto.exe
 c:\users\lenovo\documents\visual studio 2012\Projects\intentoLaberinto\intentoLaberinto\obj\Debug\intentoLaberinto.pdb
 C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\intentoLaberinto\intentoLaberinto\obj\Debug\intentoLaberinto.Form2.resources
+E:\Facu\programacionIII\intentoLaberinto\intentoLaberinto\bin\Debug\intentoLaberinto.exe.config
+E:\Facu\programacionIII\intentoLaberinto\intentoLaberinto\obj\Debug\intentoLaberinto.exe
+E:\Facu\programacionIII\intentoLaberinto\intentoLaberinto\obj\Debug\intentoLaberinto.pdb
+E:\Facu\programacionIII\intentoLaberinto\intentoLaberinto\bin\Debug\intentoLaberinto.exe
+E:\Facu\programacionIII\intentoLaberinto\intentoLaberinto\bin\Debug\intentoLaberinto.pdb
+E:\Facu\programacionIII\intentoLaberinto\intentoLaberinto\obj\Debug\intentoLaberinto.csprojResolveAssemblyReference.cache
+E:\Facu\programacionIII\intentoLaberinto\intentoLaberinto\obj\Debug\intentoLaberinto.Form1.resources
+E:\Facu\programacionIII\intentoLaberinto\intentoLaberinto\obj\Debug\intentoLaberinto.Form2.resources
+E:\Facu\programacionIII\intentoLaberinto\intentoLaberinto\obj\Debug\intentoLaberinto.Properties.Resources.resources
+E:\Facu\programacionIII\intentoLaberinto\intentoLaberinto\obj\Debug\intentoLaberinto.csproj.GenerateResource.Cache
