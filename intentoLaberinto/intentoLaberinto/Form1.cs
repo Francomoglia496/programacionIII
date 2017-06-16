@@ -47,14 +47,28 @@ namespace intentoLaberinto
                 limiteH += 20;
             }*/
 
+            //Lab.Generar(g, limiteH, limiteV, primeraVez);
+            
             Lab.Generar(g, limiteH, limiteV, primeraVez);
             primeraVez = false;
+
+            //Lab.DibujarAgente(g);
+
+
+
+
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             primeraVez = true;
-            Lab = new Maze();
+            Maze Lab = new Maze();
+
+            //Image imgImage = new Image();
+            //pictureBox1.Image = Image.FromFile(@"E:\Facu\programacionIII\intentoLaberinto\SampImag.jpg");
+
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)

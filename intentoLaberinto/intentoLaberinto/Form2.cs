@@ -28,6 +28,9 @@ namespace intentoLaberinto
             //form1.Activate();
             form1.Show();
             this.Hide();
+
+ 
+
         }
 
         private void button3_Click(object sender, EventArgs e)

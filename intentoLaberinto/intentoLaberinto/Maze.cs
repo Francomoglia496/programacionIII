@@ -18,6 +18,8 @@ namespace intentoLaberinto
 
         //clase que define un objeto para dibujar las lineas
         Pen pen1 = new Pen(Color.Blue, 3.0f);
+        Pen pen2 = new Pen(Color.Red, 3.0f);
+
         Form1 formulario = new Form1();
 
         struct celda
@@ -26,9 +28,25 @@ namespace intentoLaberinto
             //1: hay pared
             //3: bordes
             public byte N, S, E, O;
+
         }
 
         private celda[,] celda0;
+
+        /*
+        public int Padd
+        {
+            get
+            {
+                return padd;
+            }
+
+            set
+            {
+                padd = value;
+            }
+        }
+        */
 
         public Maze()
         {
@@ -186,6 +204,7 @@ namespace intentoLaberinto
             }  // se terminò el if(primeraVez)
 
             DibujarLab( g, m, n, LimiteV, LimiteH);
+
         }
 
         private int cogerCelda(ref celda[,] celda0, int thisCelda1, int thisCelda2)
@@ -263,6 +282,20 @@ namespace intentoLaberinto
             }
 
             return c;
+        }
+
+        public void DibujarAgente(Graphics e) {
+
+            // Create image.
+            Image newImage = Image.FromFile(@"E:\Facu\programacionIII\intentoLaberinto\SampImag.jpg");
+
+            // Create coordinates for upper-left corner of image.
+            int x = 100;
+            int y = 100;
+
+            // Draw image to screen.
+            e.DrawImage(newImage, x, y);
+            
         }
 
         public void DibujarLab(Graphics g, int m, int n, int LimiteV, int LimiteH)
