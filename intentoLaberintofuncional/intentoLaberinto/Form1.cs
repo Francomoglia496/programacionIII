@@ -179,7 +179,7 @@ namespace intentoLaberinto
             else if (e.KeyCode == Keys.A) {
                 //pictureBox1.Location = new Point(pictureBox1.Location.X - 2, pictureBox1.Location.Y);
 
-                if (Lab.celda0[varx, vary].O != 1)
+                if (Lab.celda0[varx, vary].O != 1 && Lab.celda0[varx, vary].O != 3)
                 {
                     vary--;
                     //pictureBox1.Location = new Point(Lab.celda0[varx, vary].punto.X, Lab.celda0[varx, vary].punto.Y);
@@ -191,7 +191,7 @@ namespace intentoLaberinto
             {
                 //pictureBox1.Location = new Point(pictureBox1.Location.X - 2, pictureBox1.Location.Y);
 
-                if (Lab.celda0[varx, vary].S != 1)
+                if (Lab.celda0[varx, vary].S != 1 && Lab.celda0[varx, vary].S != 3)
                 {
                     varx++;
                     //pictureBox1.Location = new Point(Lab.celda0[varx, vary].punto.X, Lab.celda0[varx, vary].punto.Y);
@@ -201,7 +201,7 @@ namespace intentoLaberinto
             {
                 //pictureBox1.Location = new Point(pictureBox1.Location.X - 2, pictureBox1.Location.Y);
 
-                if (Lab.celda0[varx, vary].N != 1)
+                if (Lab.celda0[varx, vary].N != 1 && Lab.celda0[varx, vary].N != 3)
                 {
                     varx--;
                     //pictureBox1.Location = new Point(Lab.celda0[varx, vary].punto.X, Lab.celda0[varx, vary].punto.Y);
