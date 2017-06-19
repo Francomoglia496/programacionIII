@@ -18,17 +18,21 @@ namespace intentoLaberinto
 
         //clase que define un objeto para dibujar las lineas
         Pen pen1 = new Pen(Color.Blue, 0);
-        Form1 formulario = new Form1();
+        Pen pen2 = new Pen(Color.Red, 0);
 
-        struct celda
+        Form1 formulario = new Form1();
+        //Point point = new Point(0,0);
+
+        public struct celda
         {
             //0: no hay pared
             //1: hay pared
             //3: bordes
             public byte N, S, E, O;
+            public Point punto;
         }
 
-        private celda[,] celda0;
+        public celda[,] celda0;
 
         public Maze()
         {
@@ -36,10 +40,13 @@ namespace intentoLaberinto
             currentCelda = new Random(DateTime.Now.Millisecond);
         }
 
+        public Stack pila1 = new Stack();
+        public Stack pila2 = new Stack();
+
         public void Generar(Graphics g, int LimiteH, int LimiteV, bool primereVez)
         {
-            Stack pila1 = new Stack();
-            Stack pila2 = new Stack();
+            //Stack pila1 = new Stack();
+            //Stack pila2 = new Stack();
 
             int totalCeldas, visitedCeldas, thisCelda1, thisCelda2;
             int masdeunaCelda, otraCelda;
@@ -68,6 +75,7 @@ namespace intentoLaberinto
                         celda0[i, j].N = 1;
                         celda0[i, j].E = 1;
                         celda0[i, j].S = 1;
+                        //celda0[i, j].punto = new Point();
 
                         if (i == 0)
                             celda0[i, j].N = 3;
@@ -281,28 +289,34 @@ namespace intentoLaberinto
                 {
                     if (celda0[m2, n2].N == 1 || celda0[m2, n2].N == 3)
                     {
+                        // le suma padd por el tema del tama;o de la celda
+
                         g.DrawLine(pen1, j, i, j + padd, i);
-                        /*Label l = new Label();
-                        l.Enabled = true;
-                        l.Visible = true;
-                        l.AutoSize = true;
-                        l.Location = new Point(i,j);
-                        l.Height = 20;
-                        l.Width = 20;
-                        formulario.Controls.Add(l);*/
-                        
+
+
+                        //g.DrawRectangle(pen2, j, i, padd, padd);
+
+                        celda0[m2, n2].punto = new Point(j, i);
+
+
                     }
                     if (celda0[m2, n2].S == 1 || celda0[m2, n2].S == 3)
                     {
                         g.DrawLine(pen1, j, i + padd, j + padd, i + padd);
+                        celda0[m2, n2].punto = new Point(j, i);
+
                     }
                     if (celda0[m2, n2].O == 1 || celda0[m2, n2].O == 3)
                     {
                         g.DrawLine(pen1, j, i, j, i + padd);
+                        celda0[m2, n2].punto = new Point(j, i);
+
                     }
                     if (celda0[m2, n2].E == 1 || celda0[m2, n2].E == 3)
                     {
                         g.DrawLine(pen1, j + padd, i, j + padd, i + padd);
+                        celda0[m2, n2].punto = new Point(j, i);
+
                     }
                     n2++;
                     if (n2 == n) break;

@@ -27,3 +27,13 @@ E:\Facu\programacionIII\intentoLaberinto - copia\intentoLaberinto\obj\Debug\inte
 E:\Facu\programacionIII\intentoLaberinto - copia\intentoLaberinto\obj\Debug\intentoLaberinto.Form2.resources
 E:\Facu\programacionIII\intentoLaberinto - copia\intentoLaberinto\obj\Debug\intentoLaberinto.Properties.Resources.resources
 E:\Facu\programacionIII\intentoLaberinto - copia\intentoLaberinto\obj\Debug\intentoLaberinto.csproj.GenerateResource.Cache
+E:\Facu\programacionIII\intentoLaberintofuncional\intentoLaberinto\bin\Debug\intentoLaberinto.exe.config
+E:\Facu\programacionIII\intentoLaberintofuncional\intentoLaberinto\obj\Debug\intentoLaberinto.exe
+E:\Facu\programacionIII\intentoLaberintofuncional\intentoLaberinto\obj\Debug\intentoLaberinto.pdb
+E:\Facu\programacionIII\intentoLaberintofuncional\intentoLaberinto\bin\Debug\intentoLaberinto.exe
+E:\Facu\programacionIII\intentoLaberintofuncional\intentoLaberinto\bin\Debug\intentoLaberinto.pdb
+E:\Facu\programacionIII\intentoLaberintofuncional\intentoLaberinto\obj\Debug\intentoLaberinto.csprojResolveAssemblyReference.cache
+E:\Facu\programacionIII\intentoLaberintofuncional\intentoLaberinto\obj\Debug\intentoLaberinto.Form1.resources
+E:\Facu\programacionIII\intentoLaberintofuncional\intentoLaberinto\obj\Debug\intentoLaberinto.Form2.resources
+E:\Facu\programacionIII\intentoLaberintofuncional\intentoLaberinto\obj\Debug\intentoLaberinto.Properties.Resources.resources
+E:\Facu\programacionIII\intentoLaberintofuncional\intentoLaberinto\obj\Debug\intentoLaberinto.csproj.GenerateResource.Cache

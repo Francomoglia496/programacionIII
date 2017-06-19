@@ -15,6 +15,7 @@ namespace intentoLaberinto
     {
         private Maze Lab;
         private bool primeraVez;
+        int varx, vary = 0;
 
         public Form1()
         {
@@ -55,6 +56,19 @@ namespace intentoLaberinto
 
             this.pictureBox1.Image = Image.FromFile(@"E:\Facu\programacionIII\intentoLaberinto\SampImag.jpg");
             this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            /*
+            foreach (int cComponente in Lab.pila1)
+            {
+                foreach (int item in Lab.pila2)
+                {
+                    richTextBox1.Text += cComponente + " " + item + "\n";
+                    richTextBox1.Text += Lab.celda0[cComponente,item]  + "\n";
+
+                }
+
+            }
+            */
 
 
         }
@@ -99,11 +113,15 @@ namespace intentoLaberinto
         {
             //- pictureBox1.Width
             //panel1.Width 
+
             if (x < panel1.Width - 100)
             {
                 //pictureBox1.Left += 10;
 
-                pictureBox1.Location = new Point(pictureBox1.Location.X + 20 );
+               //Lab.celda0[x + 20, y].punto;
+                //pictureBox1.Location = new Point(pictureBox1.Location.X + 20 );
+                pictureBox1.Location = new Point(Lab.celda0[varx + 1, vary].punto.X, Lab.celda0[varx + 1, vary].punto.Y);
+
 
             }
             //pictureBox1.Height
@@ -138,19 +156,65 @@ namespace intentoLaberinto
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
 
-            if (e.KeyCode == Keys.D)
-                pictureBox1.Location = new Point(pictureBox1.Location.X + 2, pictureBox1.Location.Y);
+            int a = Lab.celda0[varx , vary+1].punto.X;
+            int b = Lab.celda0[varx, vary + 1].punto.Y;
 
-            else if (e.KeyCode == Keys.A)
-                pictureBox1.Location = new Point(pictureBox1.Location.X - 17, pictureBox1.Location.Y);
+            richTextBox1.Text += "varx " + a + "\n";
+            richTextBox1.Text += "vary " + b + "\n";
+
+//            richTextBox1.Text += varx + "\n";
+//            richTextBox1.Text += vary + "\n";
+
+            if (e.KeyCode == Keys.D) {
+
+                if (Lab.celda0[varx, vary].E != 1)
+                {
+                    vary++;
+
+                }
+                //pictureBox1.Location = new Point(Lab.celda0[varx, vary].punto.X, Lab.celda0[varx , vary].punto.Y);
+                //pictureBox1.Location = new Point(pictureBox1.Location.X + 2, pictureBox1.Location.Y);
+            }
+
+            else if (e.KeyCode == Keys.A) {
+                //pictureBox1.Location = new Point(pictureBox1.Location.X - 2, pictureBox1.Location.Y);
+
+                if (Lab.celda0[varx, vary].O != 1)
+                {
+                    vary--;
+                    //pictureBox1.Location = new Point(Lab.celda0[varx, vary].punto.X, Lab.celda0[varx, vary].punto.Y);
+                }
+
+            }
 
             else if (e.KeyCode == Keys.S)
-                pictureBox1.Location = new Point(pictureBox1.Location.X , pictureBox1.Location.Y + (10 - (int)3.0f));
+            {
+                //pictureBox1.Location = new Point(pictureBox1.Location.X - 2, pictureBox1.Location.Y);
 
+                if (Lab.celda0[varx, vary].S != 1)
+                {
+                    varx++;
+                    //pictureBox1.Location = new Point(Lab.celda0[varx, vary].punto.X, Lab.celda0[varx, vary].punto.Y);
+                }
+                }
             else if (e.KeyCode == Keys.W)
-                pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y - (10 - (int)3.0f));
+            {
+                //pictureBox1.Location = new Point(pictureBox1.Location.X - 2, pictureBox1.Location.Y);
 
-            Refresh();
+                if (Lab.celda0[varx, vary].N != 1)
+                {
+                    varx--;
+                    //pictureBox1.Location = new Point(Lab.celda0[varx, vary].punto.X, Lab.celda0[varx, vary].punto.Y);
+
+                }
+
+                }
+
+            pictureBox1.Location = new Point(Lab.celda0[varx, vary].punto.X, Lab.celda0[varx, vary].punto.Y);
+
+            //Refresh();
+
+
 
         }
 
@@ -160,6 +224,9 @@ namespace intentoLaberinto
             
         }
 
-      
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
