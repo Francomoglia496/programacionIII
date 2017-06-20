@@ -37,3 +37,4 @@ E:\Facu\programacionIII\intentoLaberintofuncional\intentoLaberinto\obj\Debug\int
 E:\Facu\programacionIII\intentoLaberintofuncional\intentoLaberinto\obj\Debug\intentoLaberinto.Form2.resources
 E:\Facu\programacionIII\intentoLaberintofuncional\intentoLaberinto\obj\Debug\intentoLaberinto.Properties.Resources.resources
 E:\Facu\programacionIII\intentoLaberintofuncional\intentoLaberinto\obj\Debug\intentoLaberinto.csproj.GenerateResource.Cache
+E:\Facu\programacionIII\intentoLaberintofuncional\intentoLaberinto\bin\Debug\IAgent.dll

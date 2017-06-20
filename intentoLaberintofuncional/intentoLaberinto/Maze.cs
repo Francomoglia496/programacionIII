@@ -16,6 +16,8 @@ namespace intentoLaberinto
 
         private Random currentCelda;
 
+        public int ultimax, ultimay = 0;
+
         //clase que define un objeto para dibujar las lineas
         Pen pen1 = new Pen(Color.Blue, 0);
         Pen pen2 = new Pen(Color.Red, 0);
@@ -281,6 +283,7 @@ namespace intentoLaberinto
          for (int i = 0; i <= LimiteV; i += padd)
              m++; //vertical
          */
+            
             int m2 = 0, n2 = 0;
             for (int i = 0; i <= LimiteV; i += padd)
             {
@@ -324,6 +327,16 @@ namespace intentoLaberinto
                 m2++;
                 if (m2 == m) break;
             }
+
+            g.DrawRectangle(pen2, 0, 0, padd, padd);
+            ultimax = celda0[m2 - 1, n2- 1 ].punto.X;
+            ultimay = celda0[m2 - 1, n2- 1].punto.Y;
+
+            g.DrawRectangle(pen2, ultimax, ultimay, padd, padd);
+
+            ultimax = m2 - 1;
+            ultimay = n2 - 1;
+
 
         }
 

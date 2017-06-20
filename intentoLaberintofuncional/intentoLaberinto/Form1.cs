@@ -23,11 +23,14 @@ namespace intentoLaberinto
             InitializeComponent();
         }
 
-        public int limiteV = 0;
-        public int limiteH = 0;
+        //public int limiteV = 0;
+        //public int limiteH = 0;
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+            int limiteV = 0;
+            int limiteH = 0;
+
             Graphics g = e.Graphics;
             // padd == 20. LimiteV y LimiteH deben ser mùltiplos de padd
 
@@ -43,13 +46,13 @@ namespace intentoLaberinto
 
             while (limiteV < panel1.Height - 100)
             {
-                limiteV += 20;
+                limiteV += 15;
                 //limiteH += 20;
             }
 
             while (limiteH < panel1.Width - 100)
             {
-                limiteH += 20;
+                limiteH += 15;
             }
 
             Lab.Generar(g, limiteH, limiteV, primeraVez);
@@ -221,6 +224,19 @@ namespace intentoLaberinto
 
             pictureBox1.Location = new Point(Lab.celda0[varx, vary].punto.X + 3, Lab.celda0[varx, vary].punto.Y + 3);
 
+            
+            if (Lab.celda0[varx, vary].punto == Lab.celda0[Lab.ultimax,Lab.ultimay].punto)
+            {
+                const string message = "GANADOR!!";
+                const string caption = "Jeugo Terminado";
+
+                var result = MessageBox.Show(message, caption,
+                                             MessageBoxButtons.YesNo,
+                                             MessageBoxIcon.Question);
+
+            }
+            //g.DrawRectangle(pen2, x, y, padd, padd);
+            
             //Refresh();
 
 
@@ -240,8 +256,10 @@ namespace intentoLaberinto
 
         private void button2_Click(object sender, EventArgs e)
         {
+            int limiteV = 0;
+            int limiteH = 0;
 
-            this.pictureBox1.Image = Image.FromFile(@"E:\Facu\programacionIII\intentoLaberinto\SampImag.jpg");
+            this.pictureBox1.Image = Image.FromFile(@"E:\Facu\programacionIII\intentoLaberintofuncional\SampImag.jpg");
             this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.Location = new Point(Lab.celda0[varx, vary].punto.X + 3, Lab.celda0[varx, vary].punto.Y + 3);
 
@@ -275,9 +293,32 @@ namespace intentoLaberinto
                         this.Close();
 
                     }
+                    else
+                    {
+
+                        Graphics g = panel1.CreateGraphics();
+
+
+                        while (limiteV < panel1.Height - 100)
+                        {
+                            limiteV += 15;
+                            //limiteH += 20;
+                        }
+
+                        while (limiteH < panel1.Width - 100)
+                        {
+                            limiteH += 15;
+                        }
+
+                        Lab.Generar(g, limiteH, limiteV, primeraVez);
+                        primeraVez = false;
+
+
+                    }
 
                     return;
                 }
+                
             };
 
             timer.Start();
