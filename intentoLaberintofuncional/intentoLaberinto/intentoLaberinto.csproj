@@ -32,6 +32,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AgenteDLL">
+      <HintPath>..\AgenteDLL\AgenteDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="IAgent">
+      <HintPath>..\IAgent\IAgent.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

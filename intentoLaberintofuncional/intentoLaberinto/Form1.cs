@@ -16,6 +16,7 @@ namespace intentoLaberinto
         private Maze Lab;
         private bool primeraVez;
         int varx, vary = 0;
+        TimeSpan time;
 
         public Form1()
         {
@@ -54,8 +55,7 @@ namespace intentoLaberinto
             Lab.Generar(g, limiteH, limiteV, primeraVez);
             primeraVez = false;
 
-            this.pictureBox1.Image = Image.FromFile(@"E:\Facu\programacionIII\intentoLaberinto\SampImag.jpg");
-            this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            //this.pictureBox1.Image = Image.FromFile("SampImag.jpg");
 
             /*
             foreach (int cComponente in Lab.pila1)
@@ -79,9 +79,14 @@ namespace intentoLaberinto
             primeraVez = true;
             Lab = new Maze();
 
-        
+            
+
+
 
             //Image imgImage = new Image();
+
+
+
 
         }
 
@@ -145,6 +150,7 @@ namespace intentoLaberinto
                 //pictureBox1.Top = y + 10;
             }
 
+
         }
 
         private void panel1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
@@ -156,18 +162,21 @@ namespace intentoLaberinto
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
 
+            /*
+             
             int a = Lab.celda0[varx , vary+1].punto.X;
             int b = Lab.celda0[varx, vary + 1].punto.Y;
 
             richTextBox1.Text += "varx " + a + "\n";
             richTextBox1.Text += "vary " + b + "\n";
+            */
 
 //            richTextBox1.Text += varx + "\n";
 //            richTextBox1.Text += vary + "\n";
 
             if (e.KeyCode == Keys.D) {
 
-                if (Lab.celda0[varx, vary].E != 1)
+                if (Lab.celda0[varx, vary].E != 1 && Lab.celda0[varx, vary].E != 3)
                 {
                     vary++;
 
@@ -210,7 +219,7 @@ namespace intentoLaberinto
 
                 }
 
-            pictureBox1.Location = new Point(Lab.celda0[varx, vary].punto.X, Lab.celda0[varx, vary].punto.Y);
+            pictureBox1.Location = new Point(Lab.celda0[varx, vary].punto.X + 3, Lab.celda0[varx, vary].punto.Y + 3);
 
             //Refresh();
 
@@ -222,6 +231,56 @@ namespace intentoLaberinto
         {
 
             
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            this.pictureBox1.Image = Image.FromFile(@"E:\Facu\programacionIII\intentoLaberinto\SampImag.jpg");
+            this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.Location = new Point(Lab.celda0[varx, vary].punto.X + 3, Lab.celda0[varx, vary].punto.Y + 3);
+
+            time = TimeSpan.Parse("00:03:00");
+
+            System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+            timer.Interval = 1000;
+
+            timer.Tick += (a, b) =>
+            {
+                time = time.Subtract(new TimeSpan(0, 0, 1));
+                label1.Text = time.ToString();
+
+                if (time.Minutes == 0)
+                {
+                    timer.Stop();
+
+                    const string message = "Lo Siento Perdiste, quieres volver a empezar?";
+                    const string caption = "Jeugo Terminado";
+
+                    var result = MessageBox.Show(message, caption,
+                                                 MessageBoxButtons.YesNo,
+                                                 MessageBoxIcon.Question);
+
+                    // If the no button was pressed ...
+                    if (result == DialogResult.No)
+                    {
+                        // cancel the closure of the form.
+                        //e.Cancel = true;
+                        //Form1 form1 = new Form1();
+                        this.Close();
+
+                    }
+
+                    return;
+                }
+            };
+
+            timer.Start();
         }
 
         private void label1_Click(object sender, EventArgs e)
