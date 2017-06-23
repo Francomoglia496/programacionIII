@@ -21,6 +21,7 @@ namespace intentoLaberinto
         //clase que define un objeto para dibujar las lineas
         Pen pen1 = new Pen(Color.Blue, 0);
         Pen pen2 = new Pen(Color.Red, 0);
+        public Pen pen3 = new Pen(Color.Yellow, 0);
 
         Form1 formulario = new Form1();
         //Point point = new Point(0,0);
@@ -32,6 +33,7 @@ namespace intentoLaberinto
             //3: bordes
             public byte N, S, E, O;
             public Point punto;
+            public bool visitado;
         }
 
         public celda[,] celda0;

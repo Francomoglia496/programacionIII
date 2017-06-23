@@ -38,3 +38,14 @@ E:\Facu\programacionIII\intentoLaberintofuncional\intentoLaberinto\obj\Debug\int
 E:\Facu\programacionIII\intentoLaberintofuncional\intentoLaberinto\obj\Debug\intentoLaberinto.Properties.Resources.resources
 E:\Facu\programacionIII\intentoLaberintofuncional\intentoLaberinto\obj\Debug\intentoLaberinto.csproj.GenerateResource.Cache
 E:\Facu\programacionIII\intentoLaberintofuncional\intentoLaberinto\bin\Debug\IAgent.dll
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\LABERINTO\programacionIII\intentoLaberintofuncional\intentoLaberinto\bin\Debug\intentoLaberinto.exe.config
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\LABERINTO\programacionIII\intentoLaberintofuncional\intentoLaberinto\obj\Debug\intentoLaberinto.exe
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\LABERINTO\programacionIII\intentoLaberintofuncional\intentoLaberinto\obj\Debug\intentoLaberinto.pdb
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\LABERINTO\programacionIII\intentoLaberintofuncional\intentoLaberinto\bin\Debug\intentoLaberinto.exe
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\LABERINTO\programacionIII\intentoLaberintofuncional\intentoLaberinto\bin\Debug\intentoLaberinto.pdb
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\LABERINTO\programacionIII\intentoLaberintofuncional\intentoLaberinto\bin\Debug\IAgent.dll
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\LABERINTO\programacionIII\intentoLaberintofuncional\intentoLaberinto\obj\Debug\intentoLaberinto.csprojResolveAssemblyReference.cache
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\LABERINTO\programacionIII\intentoLaberintofuncional\intentoLaberinto\obj\Debug\intentoLaberinto.Form1.resources
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\LABERINTO\programacionIII\intentoLaberintofuncional\intentoLaberinto\obj\Debug\intentoLaberinto.Form2.resources
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\LABERINTO\programacionIII\intentoLaberintofuncional\intentoLaberinto\obj\Debug\intentoLaberinto.Properties.Resources.resources
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\LABERINTO\programacionIII\intentoLaberintofuncional\intentoLaberinto\obj\Debug\intentoLaberinto.csproj.GenerateResource.Cache

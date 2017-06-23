@@ -18,6 +18,8 @@ namespace intentoLaberinto
         int varx, vary = 0;
         TimeSpan time;
 
+        //Graphics g2 = new Graphics(panel1);
+
         public Form1()
         {
             InitializeComponent();
@@ -114,43 +116,80 @@ namespace intentoLaberinto
         private void eventoTimer(object sender, ElapsedEventArgs e)
         {
             CheckForIllegalCrossThreadCalls = false;
-            moveImage(pictureBox1.Location.X, pictureBox1.Location.Y);
+            moveImage(0, 0);
         }
 
         private void moveImage(int x, int y)
         {
-            //- pictureBox1.Width
-            //panel1.Width 
 
-            if (x < panel1.Width - 100)
+            if (Lab.ultimax == x && Lab.ultimay == y)
             {
-                //pictureBox1.Left += 10;
+                const string message = "GANADOR!!";
+                const string caption = "Jeugo Terminado";
 
-               //Lab.celda0[x + 20, y].punto;
-                //pictureBox1.Location = new Point(pictureBox1.Location.X + 20 );
-                pictureBox1.Location = new Point(Lab.celda0[varx + 1, vary].punto.X, Lab.celda0[varx + 1, vary].punto.Y);
-
-
+                var result = MessageBox.Show(message, caption,
+                                             MessageBoxButtons.YesNo,
+                                             MessageBoxIcon.Question);
+                this.Close();
             }
-            //pictureBox1.Height
-            else if (y < panel1.Height - 100 )
+            else
             {
-                pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y + 20);
-                //pictureBox1.Top = y + 10;
-            }
+                if (Lab.celda0[x, y].E != 1 && Lab.celda0[x, y].E != 3 && Lab.celda0[x, y + 1].visitado == false)
+                {
+                    y++;
+                    //pictureBox1.Location = new Point(Lab.celda0[x, y].punto.X, Lab.celda0[x, y].punto.Y);
+                    pictureBox1.Location = new Point(Lab.celda0[x, y].punto.X + 3, Lab.celda0[x, y].punto.Y + 3);
 
-            else if (x > panel1.Width - 100)
-            {
-                //pictureBox1.Left += 10;
+                    Lab.celda0[x, y].visitado = true;
 
-                pictureBox1.Location = new Point(pictureBox1.Location.X - 20, pictureBox1.Location.Y);
+                    //g2.DrawRectangle(Lab.pen3, x, y, 15, 15);
 
-            }
-            //pictureBox1.Height
-            else if (y > panel1.Height - 100)
-            {
-                pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y - 20);
-                //pictureBox1.Top = y + 10;
+                    richTextBox1.Text += " " + Lab.celda0[x, y].punto.X + " " + Lab.celda0[x, y].punto.Y + "derecha \n";
+                    moveImage(x, y);
+
+                }
+
+                if (Lab.celda0[x, y].S != 1 && Lab.celda0[x, y].S != 3 && Lab.celda0[x + 1, y].visitado == false)
+                {
+                    x++;
+                    //pictureBox1.Location = new Point(x, y);
+                    pictureBox1.Location = new Point(Lab.celda0[x, y].punto.X + 3, Lab.celda0[x, y].punto.Y + 3);
+
+                    Lab.celda0[x, y].visitado = true;
+
+                    richTextBox1.Text += " " + Lab.celda0[x, y].punto.X + " " + Lab.celda0[x, y].punto.Y + "sur \n";
+
+                    moveImage(x, y);
+
+                }
+
+                if (Lab.celda0[x, y].O != 1 && Lab.celda0[x, y].O != 3 && Lab.celda0[x, y - 1].visitado == false)
+                {
+                    y--;
+//                    pictureBox1.Location = new Point(x, y);
+                    pictureBox1.Location = new Point(Lab.celda0[x, y].punto.X + 3, Lab.celda0[x, y].punto.Y + 3);
+
+                    Lab.celda0[x, y].visitado = true;
+
+                    richTextBox1.Text += " " + Lab.celda0[x, y].punto.X + " " + Lab.celda0[x, y].punto.Y + "izq \n";
+
+                    moveImage(x, y);
+
+                }
+
+                if (Lab.celda0[x, y].N != 1 && Lab.celda0[x, y].N != 3 && Lab.celda0[x - 1, y].visitado == false)
+                {
+                    x--;
+                    pictureBox1.Location = new Point(Lab.celda0[x, y].punto.X + 3, Lab.celda0[x, y].punto.Y + 3);
+
+//                    pictureBox1.Location = new Point(x, y);
+                    Lab.celda0[x, y].visitado = true;
+
+                    richTextBox1.Text += " " + Lab.celda0[x, y].punto.X + " " + Lab.celda0[x, y].punto.Y + "norte \n";
+
+                    moveImage(x, y);
+
+                }
             }
 
 
@@ -256,10 +295,21 @@ namespace intentoLaberinto
 
         private void button2_Click(object sender, EventArgs e)
         {
+            foreach (int item in Lab.pila1)
+            {
+                richTextBox1.Text += " " + item + " \n";
+                //richTextBox1.Text += " " + Lab.pila2.Peek() + " \n";
+
+
+            
+            }
+
+
             int limiteV = 0;
             int limiteH = 0;
 
-            this.pictureBox1.Image = Image.FromFile(@"E:\Facu\programacionIII\intentoLaberintofuncional\SampImag.jpg");
+            //this.pictureBox1.Image = Image.FromFile(@"E:\Facu\programacionIII\intentoLaberintofuncional\SampImag.jpg");
+            this.pictureBox1.Image = Image.FromFile(@"C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\programacionIII\intentoLaberintofuncional\SampImag.jpg");
             this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.Location = new Point(Lab.celda0[varx, vary].punto.X + 3, Lab.celda0[varx, vary].punto.Y + 3);
 
