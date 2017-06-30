@@ -1,44 +1,59 @@
-﻿using System;
+﻿using IAgent;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace AgenteDLL
 {
-    public class Agente
+    class Agente : ISolverAgent
     {
 
-        String nombre;
+        private Stack<Point> Recorrido { get; set; }
 
-        public string Nombre
+        private List<Point> CeldasVisitadas { get; set; }
+
+        private Point end;
+
+        public Agente()
         {
-            get
-            {
-                return nombre;
-            }
-
-            set
-            {
-                nombre = value;
-            }
         }
 
-        public string Imagen
+        //Algortmo de resolucion del laberinto
+        public Point moveAgent(params Point[] directions)
         {
-            get
+            if (Recorrido.Count == 0)
             {
-                return imagen;
-            }
+                Recorrido.Push(directions[0]);
+                CeldasVisitadas.Add(directions[0]);
+                return directions[0];
 
-            set
+            }
+            else
             {
-                imagen = value;
+                foreach (Point punto in directions)
+                {
+                    if (!CeldasVisitadas.Contains(punto))
+                    {
+                        CeldasVisitadas.Add(punto);
+                        Recorrido.Push(punto);
+                        return punto;
+                    }
+                }
+                Recorrido.Pop();
+                foreach (Point punto in directions)
+                {
+                    if (punto.Equals(Recorrido.Peek()))
+                    {
+                        return punto;
+                    }
+                }
+
+                return end;
             }
         }
-
-        String imagen;
-
 
 
     }

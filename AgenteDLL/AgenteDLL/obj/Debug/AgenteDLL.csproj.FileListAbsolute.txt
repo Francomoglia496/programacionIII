@@ -3,3 +3,9 @@ c:\users\umantram\documents\visual studio 2015\Projects\AgenteDLL\AgenteDLL\bin\
 c:\users\umantram\documents\visual studio 2015\Projects\AgenteDLL\AgenteDLL\obj\Debug\AgenteDLL.csprojResolveAssemblyReference.cache
 c:\users\umantram\documents\visual studio 2015\Projects\AgenteDLL\AgenteDLL\obj\Debug\AgenteDLL.dll
 c:\users\umantram\documents\visual studio 2015\Projects\AgenteDLL\AgenteDLL\obj\Debug\AgenteDLL.pdb
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\LABERINTO\programacionIII\AgenteDLL\AgenteDLL\bin\Debug\AgenteDLL.dll
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\LABERINTO\programacionIII\AgenteDLL\AgenteDLL\bin\Debug\AgenteDLL.pdb
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\LABERINTO\programacionIII\AgenteDLL\AgenteDLL\bin\Debug\IAgent.dll
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\LABERINTO\programacionIII\AgenteDLL\AgenteDLL\obj\Debug\AgenteDLL.csprojResolveAssemblyReference.cache
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\LABERINTO\programacionIII\AgenteDLL\AgenteDLL\obj\Debug\AgenteDLL.dll
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\LABERINTO\programacionIII\AgenteDLL\AgenteDLL\obj\Debug\AgenteDLL.pdb

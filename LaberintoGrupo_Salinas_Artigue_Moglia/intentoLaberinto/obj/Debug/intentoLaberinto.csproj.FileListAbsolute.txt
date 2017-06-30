@@ -49,3 +49,6 @@ C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\LABERINTO\programacionIII\
 C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\LABERINTO\programacionIII\intentoLaberintofuncional\intentoLaberinto\obj\Debug\intentoLaberinto.Form2.resources
 C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\LABERINTO\programacionIII\intentoLaberintofuncional\intentoLaberinto\obj\Debug\intentoLaberinto.Properties.Resources.resources
 C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\LABERINTO\programacionIII\intentoLaberintofuncional\intentoLaberinto\obj\Debug\intentoLaberinto.csproj.GenerateResource.Cache
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\LABERINTO\programacionIII\intentoLaberintofuncional\intentoLaberinto\bin\Debug\AgenteDLL.dll
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\LABERINTO\programacionIII\intentoLaberintofuncional\intentoLaberinto\bin\Debug\AgenteDLL.pdb
+C:\Users\Lenovo\Documents\Visual Studio 2012\Projects\LABERINTO\programacionIII\LaberintoGrupo_Salinas_Artigue_Moglia\intentoLaberinto\bin\Debug\intentoLaberinto.exe
